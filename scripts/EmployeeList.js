@@ -1,6 +1,6 @@
-import { useEmployees } from "./employeeProvider.js";
+import { useEmployees } from "./EmployeeProvider.js";
 import { useComputers } from "./ComputerProvider.js";
-import {Employee } from "./employee.js"
+import { Employee } from "./Employee.js"
 import { useDepartments } from "./DepartmentProvider.js";
 
 
@@ -11,7 +11,7 @@ const render = (employeesToRender) => {
     const departments = useDepartments()
 
 
-    
+
         contentTarget.innerHTML = employeesToRender.map(
             (employeeObject) => {
 
@@ -31,7 +31,8 @@ const render = (employeesToRender) => {
             return Employee(employeeObject,foundComputer,foundDepartment)
 
 
-        }).join("")
+        }
+        ).join("")
     }
 
 export const EmployeeList = () => {
