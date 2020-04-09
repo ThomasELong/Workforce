@@ -1,7 +1,7 @@
 let employees = []
 
 export const useEmployees = () => {
-    return employees.slice
+    return employees.slice()
 }
 
 export const getEmployees = () => {

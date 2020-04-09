@@ -1,7 +1,7 @@
 let computers = []
 
 export const useComputers = () => {
-    return computers.slice
+    return computers.slice()
 }
 
 export const getComputers = () => {
