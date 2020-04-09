@@ -33,7 +33,8 @@
             "lastName": "Ittycheriah",
             "age": 25,
             "computerId": 1,
-            "departmentId": 1
+            "departmentId": 1,
+            "locationId": 5
         },
         {
             "id": 2,
@@ -41,7 +42,8 @@
             "lastName": "Jones",
             "age": 26,
             "computerId": 2,
-            "departmentId": 1
+            "departmentId": 1,
+            "locationId": 4
         },
         {
             "id": 3,
@@ -49,7 +51,8 @@
             "lastName": "Bertram",
             "age": 27,
             "computerId": 3,
-            "departmentId": 2
+            "departmentId": 2,
+            "locationId": 3
         },
         {
             "id": 4,
@@ -57,7 +60,8 @@
             "lastName": "Lawrence",
             "age": 28,
             "computerId": 4,
-            "departmentId": 3
+            "departmentId": 3,
+            "locationId": 2
         },
         {
             "id": 5,
@@ -65,7 +69,8 @@
             "lastName": "Price",
             "age": 29,
             "computerId": 5,
-            "departmentId": 4
+            "departmentId": 4,
+            "locationId": 1
         }
     ],
     "departments": [
@@ -84,6 +89,28 @@
         {
             "id": 4,
             "name": "IT"
+        }
+    ],
+    "locations": [
+        {
+            "id": 1,
+            "city": "Nashville"
+        },
+        {
+            "id": 2,
+            "city": "Franklin"
+        },
+        {
+            "id": 3,
+            "city": "Knoxville"
+        },
+        {
+            "id": 4,
+            "city": "Bowling Green"
+        },
+        {
+            "id": 5,
+            "city": "Chattanooga"
         }
     ]
 }
