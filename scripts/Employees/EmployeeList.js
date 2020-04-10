@@ -1,10 +1,10 @@
-import { useEmployees } from "./EmployeeProvider.js";
-import { useComputers } from "./ComputerProvider.js";
-import { Employee } from "./Employee.js"
-import { useDepartments } from "./DepartmentProvider.js";
-import { useLocations } from "./LocationProvider.js";
+import { useEmployees } from "./employeeProvider.js";
+import { useComputers } from "../ComputerProvider.js";
+import { Employee } from "./employee.js"
+import { useDepartments } from "../DepartmentProvider.js";
+import { useLocations } from "../LocationProvider.js";
 import { useEmployeeCustomers } from "./EmployeeCustomerProvider.js"
-import { useCustomers } from "./CustomerProvider.js"
+import { useCustomers } from "../Customers/CustomerProvider.js"
 
 const contentTarget = document.querySelector(".employeesContainer")
 
