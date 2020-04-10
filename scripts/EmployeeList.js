@@ -3,7 +3,8 @@ import { useComputers } from "./ComputerProvider.js";
 import { Employee } from "./Employee.js"
 import { useDepartments } from "./DepartmentProvider.js";
 import { useLocations } from "./LocationProvider.js";
-
+import { useEmployeeCustomers } from "./EmployeeCustomerProvider.js"
+import { useCustomers } from "./CustomerProvider.js"
 
 const contentTarget = document.querySelector(".employeesContainer")
 
@@ -11,6 +12,8 @@ const render = (employeesToRender) => {
     const computers = useComputers()
     const departments = useDepartments()
     const locations = useLocations()
+    const customers = useCustomers()
+    const employeeCustomers = useEmployeeCustomers()
 
 
 
@@ -35,9 +38,20 @@ const render = (employeesToRender) => {
                     }
                 )
 
+                const filteredRelationships = employeeCustomers.filter(
+                    employeeCustomerRelationship => {
+                        return employeeObject.id === employeeCustomerRelationship.employeeId
+                    }
+                )
 
-            return Employee(employeeObject,foundComputer,foundDepartment,foundLocation)
+                const theMatchingCustomerObjects = filteredRelationships.map(
+                    relationship => {
+                        const customer = customers.find(customer => customer.id === relationship.customerId)
+                        return customer
+                    }
+                )
 
+            return Employee(employeeObject,foundComputer,foundDepartment,foundLocation,theMatchingCustomerObjects)
 
         }
         ).join("")
@@ -48,7 +62,3 @@ export const EmployeeList = () => {
 
     render(employees)
 }
-
-
-
-
